@@ -1,6 +1,6 @@
   {
   "name": "innesta",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Node application that recursively includes javascript files starting from a source file.",
   "main": "index.js",
   "repository": "https://github.com/ammatwain/innesta.git",
