@@ -1,5 +1,5 @@
 all:
-	pkg includer.js -o includer
-install: includer
-	sudo cp includer /usr/local/bin
+	pkg innesta.js -o innesta
+install: innesta
+	sudo cp innesta /usr/local/bin
 

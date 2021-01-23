@@ -1,16 +1,16 @@
-{
-  "name": "includer",
+  {
+  "name": "innesta",
   "version": "1.0.0",
   "description": "Applicazione node che include ricorsivamente file javascript a partire da un file d'origine",
-  "main": "includer.js",
-  "repository": "https://github.com/ammatwain/includer.git",
+  "main": "innesta.js",
+  "repository": "https://github.com/ammatwain/innesta.git",
   "author": "ammatwain <amedeo@sorpreso.it>",
   "license": "MIT",
   "scripts":{
-    "includer":"node includer.js",
-    "make":"yarn pkg includer.js -o includer",
-    "install":"yarn make && sudo cp includer /usr/local/bin",
-    "test":"yarn install && includer test/a.js"
+    "innesta":"node innesta.js",
+    "make":"yarn pkg innesta.js -o innesta",
+    "install":"yarn make && sudo cp innesta /usr/local/bin",
+    "test":"yarn install && innesta test/a.js"
   },
   "dependencies": {},
   "devDependencies": {
