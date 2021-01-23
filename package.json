@@ -8,7 +8,8 @@
   "license": "MIT",
   "scripts":{
     "make":"yarn pkg includer.js -o includer",
-    "install":"yarn make && sudo cp includer /usr/local/bin"
+    "install":"yarn make && sudo cp includer /usr/local/bin",
+    "test":"yarn install && includer test/a.js"
   },
   "dependencies": {},
   "devDependencies": {
