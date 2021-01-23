@@ -1,0 +1,17 @@
+{
+  "name": "includer",
+  "version": "1.0.0",
+  "description": "Applicazione node che include ricorsivamente file javascript a partire da un file d'origine",
+  "main": "includer.js",
+  "repository": "https://github.com/ammatwain/includer.git",
+  "author": "ammatwain <amedeo@sorpreso.it>",
+  "license": "MIT",
+  "scripts":{
+    "make":"yarn pkg includer.js -o includer",
+    "install":"yarn make && sudo cp includer /usr/local/bin"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "pkg": "^4.4.9"
+  }
+}
