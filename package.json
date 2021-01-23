@@ -7,6 +7,7 @@
   "author": "ammatwain <amedeo@sorpreso.it>",
   "license": "MIT",
   "scripts":{
+    "includer":"node includer.js",
     "make":"yarn pkg includer.js -o includer",
     "install":"yarn make && sudo cp includer /usr/local/bin",
     "test":"yarn install && includer test/a.js"
