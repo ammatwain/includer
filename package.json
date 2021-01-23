@@ -7,10 +7,10 @@
   "author": "ammatwain <amedeo@sorpreso.it>",
   "license": "MIT",
   "scripts":{
-    "innesta":"node index.js",
-    "make":"yarn pkg index.js -o innesta",
-    "install":"yarn make && sudo cp innesta /usr/local/bin",
-    "test":"yarn install && innesta test/a.js"
+    "esegui":"node index.js",
+    "costruisci":"yarn pkg index.js -o innesta",
+    "installa":"yarn build && sudo cp innesta /usr/local/bin",
+    "test":""
   },
   "dependencies": {},
   "devDependencies": {
