@@ -1,5 +1,6 @@
-# Logs
+#executable
 innesta
+# Logs
 logs
 *.log
 npm-debug.log*
