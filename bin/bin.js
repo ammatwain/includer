@@ -1,3 +1,2 @@
 #! /usr/bin/env node
-var shell = require("shelljs");
-shell.exec("node index.js"); 
+require("innesta/index.js");
