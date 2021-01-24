@@ -1,7 +1,25 @@
 const fs = require('fs')
 const path = require('path');
 
-let args = process.argv.slice(2)
+const args = process.argv.slice(2)
+var out = null;
+
+function getArgValue(arg) {
+  let flag = args.indexOf(arg);
+  if (flag>=0 && args.length>flag+1) {
+    return args[flag+1];
+  } else {
+    return '';
+  }
+}
+
+function getInputFilename() {
+  return getArgValue('-i');
+}
+
+function getOutputFilename() { 
+  return getArgValue('-o');
+}
 
 function include(filename, dir = '', spaces='') {
   if (dir=='') {
@@ -24,10 +42,24 @@ function include(filename, dir = '', spaces='') {
       let subSrcFilename = path.basename(subSrcPath);
       include(subSrcFilename,`${dir}/${subSrcDir}`, subSpaces);
     }
-    if (array[i]) console.log(spaces + array[i]);
+    if(out) {
+      if (array[i]) out.write(spaces + array[i] + "\n");
+    } else {
+      if (array[i]) console.log(spaces + array[i]);
+    }
   }
 }
 
-if (fs.existsSync(args[0])) {
-  include(args[0]);
+let ifn = getInputFilename();
+let ofn = getOutputFilename();
+
+if (fs.existsSync(ifn)) {
+  if (ofn!='') {
+    out = fs.createWriteStream(ofn, {
+      flags: 'w' // 'a' means appending (old data will be preserved)
+    });
+  }
+  include(ifn);
+  if (out) out.end();
 }
+
