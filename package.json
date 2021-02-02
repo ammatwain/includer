@@ -1,6 +1,6 @@
 {
   "name": "innesta",
-  "version": "1.0.14",
+  "version": "1.0.16",
   "description": "Node application that recursively includes javascript files starting from a source file.",
   "main": "index.js",
   "repository": {
